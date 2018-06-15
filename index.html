@@ -1,0 +1,54 @@
+<title>Jank: A Text Friendly HTML Template</title>
+
+<h1>Jank: A Text Friendly HTML Template</h1>
+
+Want to write some text and put it on a static website, without a framework, compilers, learning special syntax, or other distractions? Don't want anything other than just raw text content?
+
+Jank is a simple HTML file, with no javascript code, that uses some basic CSS to make it possible to write plain text with newlines and tabs and have that be broken out appropriately on the browser page. It's really just a simple "hack".
+
+    Here, let's make a tabbed section and talk about lists
+
+        You can make a bulleted list:
+
+        - pizza
+        - burger
+        - hotdog
+
+        Or an ordered list:
+
+        1. one
+        2. two
+        3. three
+
+You can, if required, add straight up HTML too:
+
+<img src="https://media2.giphy.com/media/ule4vhcY1xEKQ/giphy.gif"></img>
+
+In the same vein, you can share blocks of mono-spaced text using the 'pre' tag:
+
+<pre>
+function addOne(x) { return x + 1; }
+addOne(1) // => 2
+</pre>
+
+You can even support fancy features like (*gasp*) footnotes!<sup><a href="#1">1</a></sup> (It's really nothing fancy, it's just HTML)
+
+Here is the template you can use, with your own content. Copy paste this into a file, save it as something with .html as the extension, and place it in a static file server (or just double click to preview locally):
+
+<pre>
+&lt;title&gt;Tab/Window Title&lt;/title&gt;
+
+Heading
+
+Here's some example body text.
+
+&lt;style&gt;body { white-space: pre-wrap; margin: 1em auto; line-height:1.5; max-width: 32em; padding:0 1em; font-size: 1.6em; color: #333; } body * { overflow-x: scroll; max-width: 90%; } pre { background-color: #eee; padding: 1.5em; }&lt;/style&gt;
+</pre>
+
+<hr />
+
+<span id="1">1</span> - An example footnote! You can do this by using <code>&lt;sup&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;</code> to indicate the existence of a footnote, and <code>&lt;span id=&quot;1&quot;&gt;1&lt;/span&gt;</code> just before the actual footnote.
+
+<a href="https://github.com/gnarmis/jank" alt="github-link">Github Link</a>
+
+<style>body { white-space: pre-wrap; margin: 1em auto; line-height:1.5; max-width: 32em; padding:0 1em; font-size: 1.6em; color: #333; } body * { overflow-x: scroll; max-width: 90%; } pre { background-color: #eee; padding: 1.5em; }</style>
